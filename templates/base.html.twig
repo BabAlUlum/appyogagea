@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .salt8 {
+                margin: 1em auto;
+                padding-top: 48px;
+                max-width: 100%;
+                width: 95%;
+                }
+            .carousel {
+                padding-top: 64px;
+                margin-top: 0px;
+                width: 100%;
+                }
+            .navdeco {
+                list-style-type: none;
+                position: fixed;
+                margin-top: 0;
+                padding: 0;
+                top: 0;
+                width: 100%;
+                z-index: 99;
+                overflow: hidden;
+                background-image: url("images/bgtest.jpg");
+                }
+
+            .footerdeco {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-image: url("images/bgtest.jpg");
+                }
+            .btn{
+                background-image: url("images/bgtest.jpg");
+                color: white;
+            }
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-image: url("images/bgtest.jpg");
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+                }
+
+            @media (min-width: 768px) {
+            .carousel-multi-item-2 .col-md-3 {
+                float: left;
+                width: 25%;
+                max-width: 100%;
+                }
+            }
+        </style>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div class="navdeco">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <h1 class="navbar-brand">Yogagea A.S.D</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('about') }}">CHI SIAMO ?</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('lezione') }}">LEZIONI</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('galery') }}">GALLERIA</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('contact') }}">CONTATTI</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Aller vers le haut"><i class='fas fa-angle-double-up' style='font-size:20px'> </i></button>
+
+        {% block body %}{% endblock %}
+
+        <!-- footer -->
+        <div class="footerdeco text-white">
+            <div class="d-flex row col-12">
+                <div class="col-sm-6 pt-3">
+                    <section class="z-depth-1">
+                        <h5> Sede: </h5>
+                            <ul>
+                                <p> Via Molineria San Giovanni, 13 - Piacenza </p>
+                                <p> Via Padre Dionigi Carli, 7 - Piacenza</p>
+                            </ul>
+                        <h5><a class="text-white" href="{{ path('faq') }}"> FAQ </a></h5>
+                    </section>
+                </div>
+
+                <div class="col-sm-6 pt-3">
+                    <section class="z-depth-1">
+                            <h5><a class="text-white" href="{{ path('contact') }}"> Contatti: </a></h5>
+                            <ul>
+                                <p><i class="fas fa fa-phone  mr-3" style="font-size:18px;"></i> +39 347 1554344</p>
+                                <p><i class="fas fa fa-envelope  mr-3" style="font-size:18px;"></i> yogagea@gmail.com</p>
+                                <p>
+                                    <a href="https://www.facebook.com/yogapiacenza/" target="blank"><i class="fab fa-facebook mr-3" style="font-size:32px;color:blue"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCZleJR42P4_kTioWE31UilQ" target="blank"><i class="fab fa-youtube mr-3" style="font-size:32px;color:red"></i></a>
+                                </p>
+                            </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="col-sm-12 text-center">
+                <p class="">
+                    copyright © yogagea a.s.d. 2019 - ASI n. EMI-PC0176 - CONI n. 277215 - C.F. 91103580337 - P.IVA 01765650336
+                </p>
+            </div>
+        </div>
+    <!-- footer -->
+
+
+        {% block javascripts %}{% endblock %}
+        <script>
+            //--- condition d’affichage du button (quand on descend de 70px )
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            //--- quand on clique sur le boutton aller en haut
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+
+            //--- Read more
+            function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                }
+            }
+
+        </script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </body>
+</html>

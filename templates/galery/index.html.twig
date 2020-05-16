@@ -1,0 +1,261 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yogagea - Galleria{% endblock %}
+
+{% block body %}
+
+<div class="salt8">
+    
+    <ul class="nav nav-tabs text-justify">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#foto">Foto</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#video">Video</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <!-- foto -->
+        <div class="tab-pane fade active show" id="foto">
+            <div class="md-6 position-static p-4 pl-md-0">
+                <div class="d-flex row">
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria01.jpg" class="d-block" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria02.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria03.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria04.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria05.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria06.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria07.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria08.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria09.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria10.jpg" class="d-block w-100" alt="">
+                    </div>
+
+                    <div class="col-sm-4 mt-4">
+                        <img class="img-fluid" src="images/galleria11.jpg" class="d-block w-100" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- foto -->
+
+        <!-- video -->
+        <!-- Grid row -->
+        <div class="tab-pane fade" id="video">
+            <div class="md-6 position-static p-4 pl-md-0">
+                <div class="row m-2">
+                <!-- 1 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8ZR1_Au8k7t1aDhLsvo88bx"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Hatha Yoga </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/hatha_yoga.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal1"></a>
+                </div>
+
+                <!-- 2 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8bFVHa3AmdXUcHueTS0Qspu"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Anasura Yoga </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/anusara_yoga.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal2"></a>
+                </div>
+
+                <!-- 3 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8bwssexQ6lOenAz8BPETk0C"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Allenamento funzionale </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/fuzione.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal3"></a>
+                </div>
+
+                <!-- 4 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8ZBMl8xS_qyTKWz53FIwYkC"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Yoga per la schiena </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/yoga_schiena.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal4"></a>
+                </div>
+
+                <!-- 5 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8Z7FnOTjDxCqqZ2nQAAEp04"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Meditazione </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/meditazione.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal5"></a>
+                </div>
+
+                <!-- 6 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8YIiqzXwGS99R7QlXNuIGv4"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Kundalina Yoga </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/kundalina_yoga.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal6"></a>
+                </div>
+
+                <!-- 7 Playlist-->
+                <div class="col-lg-4 col-md-12 mb-3">
+                    <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLxuFPdCnue8axPdCDoFYk5ZYSeb3jPhSw"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center p-2">
+                                    <h4> Yin Yoga </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image view -->
+                    <a><img class="img-fluid z-depth-1" src="images/yin_yoga.jpg" alt="video"
+                        data-toggle="modal" data-target="#modal7"></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+        <!-- Video -->
+    </div>
+    
+</div>
+
+{% endblock %}
