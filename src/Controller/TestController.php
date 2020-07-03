@@ -9,12 +9,13 @@ use Symfony\Component\BrowserKit\Response;
 use App\Form\FormcontactType;
 use App\Entity\Formcontact;
 
-class ContactController extends AbstractController
+class TestController extends AbstractController
 {
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/test", name="test")
      */
     public function index(Request $request)
+
     {
         $contact    = new Formcontact();
         $form       = $this->createForm(FormcontactType::class, $contact);
@@ -23,11 +24,13 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->addFlash('success', 'Message envoyé !');
     
-            return $this->redirectToRoute('contact');
+            return $this->redirectToRoute('test');
         }
 
-        return $this->render('contact/index.html.twig', [
+        return $this->render('test/index.html.twig', [
             'form' => $form->createView()
         ]);
     }
+
+    
 }

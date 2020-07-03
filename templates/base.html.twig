@@ -13,11 +13,13 @@
                 max-width: 100%;
                 width: 95%;
                 }
+
             .carousel {
                 padding-top: 64px;
                 margin-top: 0px;
                 width: 100%;
                 }
+
             .navdeco {
                 list-style-type: none;
                 position: fixed;
@@ -27,7 +29,7 @@
                 width: 100%;
                 z-index: 99;
                 overflow: hidden;
-                background-image: url("images/bgtest.jpg");
+                background-image: url("images/bg.jpg");
                 }
 
             .footerdeco {
@@ -35,12 +37,14 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-image: url("images/bgtest.jpg");
+                background-image: url("images/bg.jpg");
                 }
+
             .btn{
-                background-image: url("images/bgtest.jpg");
+                background-image: url("images/bgcontact01.jpg");
                 color: white;
             }
+
             #myBtn {
                 display: none;
                 position: fixed;
@@ -50,7 +54,7 @@
                 font-size: 18px;
                 border: none;
                 outline: none;
-                background-image: url("images/bgtest.jpg");
+                background-image: url("images/bg.jpg");
                 color: white;
                 cursor: pointer;
                 padding: 15px;
@@ -65,12 +69,14 @@
                 }
             }
         </style>
+
         {% block stylesheets %}{% endblock %}
     </head>
+
     <body>
         <div class="navdeco">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <h1 class="navbar-brand">Yogagea A.S.D</h1>
+                <h1 class="navbar-brand"> Yogagea A.S.D </h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -103,7 +109,9 @@
 
         <!-- footer -->
         <div class="footerdeco text-white">
-            <div class="d-flex row col-12">
+
+            <div class="d-flex row col-sm-12">
+
                 <div class="col-sm-6 pt-3">
                     <section class="z-depth-1">
                         <h5> Sede: </h5>
@@ -119,7 +127,7 @@
                     <section class="z-depth-1">
                             <h5><a class="text-white" href="{{ path('contact') }}"> Contatti: </a></h5>
                             <ul>
-                                <p><i class="fas fa fa-phone  mr-3" style="font-size:18px;"></i> +39 347 1554344</p>
+                                <p><i class="fas fa fa-phone  mr-3" style="font-size:18px;"></i> +39 347 155 4344</p>
                                 <p><i class="fas fa fa-envelope  mr-3" style="font-size:18px;"></i> yogagea@gmail.com</p>
                                 <p>
                                     <a href="https://www.facebook.com/yogapiacenza/" target="blank"><i class="fab fa-facebook mr-3" style="font-size:32px;color:blue"></i></a>
@@ -128,14 +136,17 @@
                             </ul>
                     </section>
                 </div>
+
             </div>
+
             <div class="col-sm-12 text-center">
                 <p class="">
                     copyright © yogagea a.s.d. 2019 - ASI n. EMI-PC0176 - CONI n. 277215 - C.F. 91103580337 - P.IVA 01765650336
                 </p>
             </div>
+
         </div>
-    <!-- footer -->
+        <!-- footer -->
 
 
         {% block javascripts %}{% endblock %}
